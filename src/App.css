@@ -1,0 +1,167 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI", Roboto,
+    "Helvetica Neue",
+    Arial, sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+input.form-control.rounded-0 {
+  margin-bottom: 10px;
+}
+
+/* .form-control,
+.btn {
+  border-radius: 0;
+} */
+
+.form-control:focus {
+  border-color: #0b0295;
+  box-shadow: 0 0 0 .02rem rgba(13, 110, 253, .25);
+}
+
+.was-validated .form-control:valid:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 .02rem;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-control:invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 .02rem;
+}
+
+.accordion-button::after {
+  transform: rotate(-90deg);
+  filter: brightness(0) invert(1);
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg);
+}
+
+button.accordion-button {
+  padding-right: 10px;
+  padding-left: 15px;
+}
+
+.accordion-body {
+  padding-right: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-item:first-of-type>.accordion-header .accordion-button,
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed,
+.sidebar-wrapper .accordion-header .accordion-button,
+.accordion-item {
+  border-radius: 0;
+  background-color: #212529;
+  color: #fff;
+  font-weight: 600;
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  font-weight: 600 !important;
+}
+
+.sidebar-wrapper .accordion-button {
+  border-radius: 0;
+  border-left: solid #212529 5px;
+}
+
+.sidebar-wrapper .accordion-header .accordion-button {
+  background-color: #212529;
+  color: #fff;
+}
+
+.sidebar-wrapper .accordion-item:first-of-type>.accordion-header .accordion-button:hover,
+.sidebar-wrapper .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed:hover,
+.sidebar-wrapper .accordion-header .accordion-button:hover {
+  background-color: #000000a3;
+  /* border-left: solid #e10808 5px; */
+}
+
+.sidebar-wrapper .accordion-button:hover {
+  background-color: #000000a3;
+  border-left: solid #e10808 5px;
+}
+
+.sidebar-wrapper .accordion-item {
+  border: none;
+  /* border-left: solid #212529 5px; */
+}
+
+.sidebar-wrapper {
+  height: 100vh;
+}
+
+.flex-column.bg-dark.sidebar-wrapper {
+  background-color: #343a40;
+}
+
+.main-content-area {
+  background: #cccccc1f;
+}
+
+a.nav-link:hover {
+  background: red;
+  border-radius: 0;
+}
+
+a.p-2.ps-4.pe-2.nav-link:before {
+  content: "\2609";
+  font-size: 15px;
+  line-height: 0;
+  margin-right: 10px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+/* sidebar */
+@media (min-width: 992px) {
+  .sidebar {
+    max-width: 280px;
+    width: 280px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .main-content-area {
+    margin-left: 280px;
+  }
+}
